@@ -34,4 +34,6 @@ In this workshop, we'll create a Defender account, monitor Forta alerts, use Sen
 
 1. See: Relayer, Sentinel, Autotask
 
-2. Trigger transaction to watch everything work 
+### Perform Transaction
+
+1. Trigger transaction to watch everything work 
