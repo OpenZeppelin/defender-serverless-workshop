@@ -12,6 +12,7 @@ contract PauseThis {
           hasAttacked[workshopperAddress] && !hasPaused[workshopperAddress]
         );
         emit Pause(workshopperAddress);
+        hasPaused[workshopperAddress] = true;
     }
 
     function vulnerableFunction(address workshopperAddress) public {
