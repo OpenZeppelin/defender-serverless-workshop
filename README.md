@@ -21,7 +21,7 @@ In this workshop, we'll create a Defender account, use Sentinels, Relayers, and 
 
 1. Checkout this Repository
 
-2. Update these settings 
+2. Update these settings in `serverless.yml`
 - `env:TEAM_API_KEY` with your generated api key
 - `env:TEAM_API_KEY` with your generated secret
 - `env:YOUR_ADDRESS` with your wallet address
