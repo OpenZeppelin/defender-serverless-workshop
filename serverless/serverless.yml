@@ -1,0 +1,70 @@
+service: defender-serverless-workshop
+configValidationMode: error
+frameworkVersion: '3'
+
+provider:
+  name: defender
+  stage: ${opt:stage, 'dev'}
+  stackName: 'mystack'
+  # SSOT: use this template as a single source of truth. 
+  # This will delete Defender resources (with the exception of Relayers) not found in this template upon deployment.
+  ssot: false
+
+defender:
+  key: "${env:TEAM_API_KEY}"
+  secret: "${env:TEAM_API_SECRET}"
+
+functions:
+  pause-autotask:
+    name: 'Call pause function on contreact'
+    path: './autotasks/pause'
+    relayer: ${self:resources.Resources.relayers.relayer-1}
+    trigger:
+      type: "webhook"
+    paused: false
+
+resources:
+  Resources:
+    policies:
+      policy-1:
+        gas-price-cap: 1000
+        eip1559-pricing: true
+
+    relayers:
+      relayer-1:
+        name: "Workshop relayer"
+        network: "goerli"
+        min-balance: 1000
+        policy: ${self:resources.Resources.policies.policy-1}
+        api-keys:
+          - key1
+      
+    sentinels:
+      sentinel-1:
+        name: "Sentinel Watching Attack"
+        type: "BLOCK"
+        network: "goerli"
+        addresses: 
+          - "0x238C14b8FE864596B0bb7cce134A7c8b8C7692a1"
+        abi: ${file(./abis/pauseThis.json.abi)}
+        confirm-level: 1
+        alert-threshold: 
+          amount: 1
+          window-seconds: 1000
+        paused: false
+        notify-config:
+          timeout: 0
+          message: null
+          channels: []
+        conditions:
+          event: 
+           -
+              signature: "attackInProgress(address)"
+              expression: "workshopperAddress="${env:YOUR_ADDRESS}""
+          function: []
+        autotask-trigger: ${self:functions.pause-autotask}
+
+plugins:
+  - defender-serverless
+
+
