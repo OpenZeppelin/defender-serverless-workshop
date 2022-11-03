@@ -1,4 +1,4 @@
-# Forta Serverless Workshop
+# Defender Serverless Workshop
 
 
 ## Summary
