@@ -22,24 +22,38 @@ In this workshop, we'll create a Defender account, use Sentinels, Relayers, and 
 1. Checkout this Repository
 
 2. Update these settings 
-- API Key
-- API Secret
+- `env:TEAM_API_KEY` with your generated api key
+- `env:TEAM_API_KEY` with your generated secret
+- `env:YOUR_ADDRESS` with your wallet address
 
 3. Run serverlesss to deploy to your account
 
      `sls deploy`
 
-### Look at Defender to see Deployments
 
-1. See: Relayer, Sentinel, Autotask
+### Look at Defender to see Deployments
+1. Navigate to your relayer
+
+2. Navigate to your autotask
+
+3. Navigate to your sentinal
+### Fund your Relayer
+
+1. Log into defender an navigate to your Relay
+
+2. In another tab go to: https://goerlifaucet.com/
+
+3. Enter your wallet address (the same address you want to receive a POAP)
+
+4. Once your wallet receives funds login to Defender and navigate to your relayers
+
+5. Send the test Eth (on goerli) to your relayer
 
 ### Perform Transaction
 
-1. Go to your deployed relayer and make a manual transaction to this address `0x238c14b8fe864596b0bb7cce134a7c8b8c7692a1`.
+1. Go to your deployed relayer and make a manual transaction to this address `0x238c14b8fe864596b0bb7cce134a7c8b8c7692a1` (make sure your relayer has test Eth).
 
 2. Select the `vulnerableFunction` and pass in your wallet address.
 
-3. Confirm transaction
+3. Confirm transaction.
 
-
-### What you should see
