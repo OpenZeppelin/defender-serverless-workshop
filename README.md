@@ -1,9 +1,9 @@
-# Forta Serverless Workshop
+# Defender Serverless Workshop
 
 
 ## Summary
 
-In this workshop, we'll create a Defender account, monitor Forta alerts, use Sentinels, Relayers, and Autotasks to trigger an action as a result.  
+In this workshop, we'll create a Defender account, monitor smart contracts, use Sentinels, Relayers, and Autotasks to trigger an action as a result.  
 
 ## Flow
 
