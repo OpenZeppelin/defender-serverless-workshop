@@ -15,7 +15,7 @@ If you are running on a windows machine you may need to install something like [
 
 ### Defender Setup
 
-1. Sign up for Free Defender account
+1. Sign up for Free Defender account: https://defender.openzeppelin.com/
 
 2. Create an API key and secret
 
