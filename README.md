@@ -13,6 +13,11 @@ In this workshop, we'll create a Defender account, use Sentinels, Relayers, and 
     
 If you are running on a windows machine you may need to install something like [Windows Subsytem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) to execute linux command line commands.
 
+2. Install the defender plugin for serverless (inside serverless direcotry)
+```
+serverless plugin install -n defender-serverless
+```
+
 ### Defender Setup
 
 1. Sign up for Free Defender account: https://defender.openzeppelin.com/
