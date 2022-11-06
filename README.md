@@ -10,6 +10,8 @@ In this workshop, we'll create a Defender account, use Sentinels, Relayers, and 
 1. Install serverless framework: https://www.serverless.com/framework/docs/getting-started/
 
     `npm install -g serverless`
+    
+If you are running on a windows machine you may need to install something like [Windows Subsytem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) to execute linux command line commands.
 
 ### Defender Setup
 
